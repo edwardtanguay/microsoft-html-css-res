@@ -1,21 +1,30 @@
 import * as tools from './tools';
-import { PageWelcome } from './pages/PageWelcome';
-import { PageInfo } from './pages/PageInfo';
-import { PageAbout } from './pages/PageAbout';
 import { Page404 } from './pages/Page404';
+import { PageDeals } from './pages/PageDeals';
+import { PageOffice } from './pages/PageOffice';
+import { PageSupport } from './pages/PageSupport';
+import { PageSurface } from './pages/PageSurface';
+import { PageWindows } from './pages/PageWindows';
+import { PageXbox } from './pages/PageXbox';
 
-const pageNames = ['Welcome', 'Info', 'About'];
+const pageNames = ['Office', 'Windows', 'Surface', 'Xbox', 'Deals', 'Support'];
 
 const currentPageIdCode = getSmartCurrentPageId();
 
 export const getCurrentPage = () => {
 	switch (currentPageIdCode) {
-		case 'welcome':
-			return PageWelcome();
-		case 'info':
-			return PageInfo();
-		case 'about':
-			return PageAbout();
+		case 'office':
+			return PageOffice();
+		case 'windows':
+			return PageWindows();
+		case 'surface':
+			return PageSurface();
+		case 'xbox':
+			return PageXbox();
+		case 'deals':
+			return PageDeals();
+		case 'support':
+			return PageSupport();
 		default:
 			return Page404();
 	}
