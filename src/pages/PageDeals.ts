@@ -1,7 +1,7 @@
 export const PageDeals = () => {
 	return /*html*/`
 <div class="page pageDeals">
-	<p>This is the deals page.</p>
+	<p>This is the <span class="highlight">deals</span> page.</p>
 </div>
 `; 
 }
